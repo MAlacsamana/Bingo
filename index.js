@@ -1,21 +1,35 @@
 console.log("Hello World.");
 
-function generateRandomNumber () {
-    // Return randomnumber 0 to 10;
-    let randonNum = Math.floor(Math.random() * 10) + 4;
+generateRandomNumber(100);
 
-    // if ...else if ...else statement
+function generateRandomNumber (max) {
+    // Add = +
+    // Sub = -
+    // Div = /
+    // Mult = *
+    // Rem =  %
+    let randomNum = Math.floor(Math.random() * max) + 1;
+
+    // if ...else if ...else 
     // if (condition) {block of code to execute}
-    // =, !, =, >, <, >, =, < =, &&, ||
+    // GT>, GTE >=, LT<, <=, EQ, =, NEQ,  !=, &&, OR||
+    if(randomNum <= 15){
+      return console.log(`Random Number ${randomNum} is in B. 1 - 15`);
 
+    } else if (randomNum >= 16 && randomNum <= 30) {
+        return console.log(`Random Number ${randomNum} is in I. 16 - 30`);
 
+    } else if (randomNum >= 31 && randomNum <= 45) {
+        return console.log(`Random Number ${randomNum} is in N. 31 - 45`);
 
+    } else if (randomNum >= 46 && randomNum <= 60) {
+        return console.log(`Random Number ${randomNum} is in G. 46 - 60`);
 
-    if(randonNum > 5){
-        console.log(`Random Number is > = to 5`);
+    } else if (randomNum >= 61 && randomNum <= 75) {
+        return console.log(`Random Number ${randomNum} is in 0. 61 - 75`);
     } else {
-        console.log(`Random Number is < = to 5`);
+        return console.log(`Random Number is invalid`);
     }
 
-    return console.log(randonNum);
+    return console.log(randomNum);
 }
